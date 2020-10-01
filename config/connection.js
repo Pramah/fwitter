@@ -1,7 +1,10 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
+
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'me',
-  password: 'secret',
-  database: 'my_db',
-});
+  user: 'root',
+  password: 'password',
+  database: 'fwitter_db',
+}).promise();
+
+module.exports = connection;
